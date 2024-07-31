@@ -75,9 +75,9 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="lg:mr-4 mb-4 lg:mb-0 hover:text-[#ccc]">
-            <NavLink to="/#courses" >
+            <a href="#courses" >
               Courses
-            </NavLink>
+            </a>
           </li>
           <li className="lg:mr-4 mb-4 lg:mb-0">
             <a href="#form" className="bg-yellow-200 hover:bg-yellow-300 hover:!text-black !text-black font-bold py-2 px-4 rounded whitespace-nowrap">
