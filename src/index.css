@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  
+
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins';
+  scroll-behavior: smooth;
+  @apply bg-gray-100 text-gray-500
+}
+a:hover {
+  @apply transition duration-200;
+  @apply text-gray-700
+}
+
+
+
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin-bottom: 1rem;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #ccc;
+}
+
+@media (min-width: 1024px) {
+
+
+  .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar li {
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar li {
+    margin-bottom: 1rem;
+  }
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
