@@ -46,6 +46,7 @@ const Faq = () => {
               </svg>
             </div>
           </button>
+          <hr className=' w-11/12 mx-auto'/>
           <div
             className={`overflow-hidden transition-max-height duration-300 ease-in-out ${
               activeIndex === index ? "max-h-40" : "max-h-0"

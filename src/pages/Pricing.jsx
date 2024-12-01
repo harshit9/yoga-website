@@ -1,4 +1,3 @@
-
 const Pricing = () => {
   return (
     <div>

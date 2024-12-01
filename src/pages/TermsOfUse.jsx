@@ -1,4 +1,3 @@
-
 const Terms_of_Use = () => {
   return (
     <div>
