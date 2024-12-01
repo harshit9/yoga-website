@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Underline from './Underline';
 
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -23,8 +24,9 @@ const Faq = () => {
   };
 
   return (
-    <div className="container w-4/5 mx-auto py-10 p-6 sm:p-6 lg:p-8">
-      <h2 className="text-2xl font-bold text-left mb-6">Frequently Asked Questions</h2>
+    <div className="container w-full md:w-4/5 mx-auto py-10 p-6 sm:p-6 lg:p-8">
+      <h2 className="text-center text-3xl font-bold text-[#454545]">Frequently Asked Questions</h2>
+      <Underline />
       {faqs.map((faq, index) => (
         <div key={index} className="mb-4">
           <button
@@ -32,7 +34,7 @@ const Faq = () => {
             className="w-full text-left px-4 py-2 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
           >
             <div className="flex justify-between items-center">
-              <span className="text-lg font-medium">{faq.question}</span>
+              <span className="text-lg text-gray-600 font-medium">{faq.question}</span>
               <svg
                 className={`w-6 h-6 transform transition-transform duration-300 ${activeIndex === index ? "rotate-180" : ""}`}
                 fill="none"
@@ -49,7 +51,7 @@ const Faq = () => {
               activeIndex === index ? "max-h-40" : "max-h-0"
             }`}
           >
-            <p className="p-4 bg-gray-50 rounded-lg">{faq.answer}</p>
+            <p className="p-4 text-gray-800 bg-gray-50 rounded-lg">{faq.answer}</p>
           </div>
         </div>
       ))}

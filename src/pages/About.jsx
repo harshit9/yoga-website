@@ -1,4 +1,3 @@
-import React from 'react';
 import Footer from '../components/Footer'; // Assuming you've created a footer component
 
 const AboutPage = () => {
@@ -23,9 +22,6 @@ const AboutPage = () => {
           <li>Growth: We believe in the continuous journey of self-improvement.</li>
         </ul>
       </div>
-
-      {/* Footer Component */}
-      <Footer />
     </div>
   );
 };

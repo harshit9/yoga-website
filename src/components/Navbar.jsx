@@ -10,13 +10,19 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#333] text-[#fff] p-4 text-center">
-      <div className="mx-auto w-10/12 p-0 lg:p-2 flex flex-col lg:flex-row justify-between items-center">
+    <nav className="bg-[#333] text-[#fff] p-3 text-center">
+      <div className="mx-auto w-10/12 p-0 lg:p-1 flex flex-col lg:flex-row justify-between items-center">
 
         <div className='w-full flex- flex justify-between'>
         
         <Link to="/" className="text-xl font-bold">
-          Yoga Studio
+          <div className='flex items-center gap-1'>
+            <img src='assets/Advait_Logo_removebg.png' className='h-12'/> 
+            <div>Advait</div>
+            {/* <div>अद्वैत</div> */}
+
+          </div>
+            
         </Link>
 
         <button

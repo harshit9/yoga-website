@@ -55,10 +55,13 @@ function Hero() {
           {/* Text Section */}
           <div className="w-full md:w-1/2 xl:w-2/3 text-left p-4 z-10">
             <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-bold mb-4">
-              Find Your Inner <br /> Peace.
+              {/* Find Your Inner <br /> Peace. */}
+              Breathe, Balance, Bloom <br /> <span className='text-2xl font-normal'>~अद्वैत</span>  
             </h1>
-            <p className="text-base md:text-lg lg:text-xl text-gray-200 mb-6">
-              Join our yoga community and discover a deeper connection with your body and mind. Our expert instructors will guide you through a journey of self-discovery and transformation.
+            <p className="text-base md:text-xl lg:text-2xl text-gray-200 mb-6">
+              {/* Join our yoga community and discover a deeper connection with your body and mind. Our expert instructors will guide you through a journey of self-discovery and transformation. */}
+              {/* Welcome to [Your Studio Name], your sanctuary for physical, mental, and spiritual growth. Our expert instructors guide you through transformative yoga practices to cultivate inner peace, strength, and flexibility. */}
+              Join our yoga community today! Explore our classes, workshops, and events. Discover your inner balance and harmony.
             </p>
           </div>
 

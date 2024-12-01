@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Underline from './Underline';
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -42,13 +43,11 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="bg-white py-20">
+    <div className="bg-white py-10">
       <div className="container mx-auto w-4/5 px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold leading-tight text-left mb-10">
-          What Our Customers Say
-        </h2>
-        
-        <div className="flex justify-center items-center gap-4">
+      <h2 className="text-center text-3xl font-bold text-[#454545]">Testimonials</h2>
+      <Underline />
+        <div className="flex justify-center items-center gap-4 pt-6">
           {/* Previous button */}
           <button
             className="text-gray-400 hover:text-gray-700 transition-all transform hover:scale-110"
