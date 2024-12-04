@@ -1,4 +1,4 @@
-import logo from '/assets/Advait_Logo_removebg.png'; // Adjust path as needed
+import logo from '/assets/Advait_Logo_removebg_resize.png'; // Adjust path as needed
 
 const Underline = () => {
     return (

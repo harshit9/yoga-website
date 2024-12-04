@@ -17,7 +17,7 @@ const Navbar = () => {
         
         <Link to="/" className="text-xl font-bold">
           <div className='flex items-center gap-1'>
-            <img src='assets/Advait_Logo_removebg.png' className='h-12'/> 
+            <img src='assets/Advait_Logo_removebg_resize.png' className='h-12'/> 
             <div>Advait</div>
             {/* <div>अद्वैत</div> */}
 
@@ -67,23 +67,26 @@ const Navbar = () => {
         </div>
 
         <ul
-          className={`lg:flex lg:items-center lg:justify-between ${isOpen ? 'flex flex-col' : 'hidden'
-            } lg:block`}
+          className={`lg:flex lg:items-center lg:justify-between text-lg ${isOpen ? 'flex flex-col' : 'hidden'
+            } lg:block `}
         >
-          <li className="lg:mr-4 mb-4 lg:mb-0 hover:text-[#fff]">
+          <li className="lg:mr-4 mb-4 lg:underline font-semibold lg:mb-0 hover:text-[#fff]">
             <NavLink to="/" >
               Home
             </NavLink>
+            {isOpen && <hr />}
           </li>
-          <li className="lg:mr-4 mb-4 lg:mb-0 hover:text-[#ccc]" >
-            <NavLink to="/about" >
-              About
+          <li className="lg:mr-4 mb-4 lg:underline font-semibold lg:mb-0 hover:text-[#ccc]" >
+            <NavLink to="/Pricing" >
+              Pricing
             </NavLink>
+            {isOpen && <hr />}
           </li>
-          <li className="lg:mr-4 mb-4 lg:mb-0 hover:text-[#ccc]">
-            <a href="#courses" >
-              Courses
-            </a>
+          <li className="lg:mr-4 mb-4 lg:underline whitespace-nowrap font-semibold lg:mb-0 hover:text-[#ccc]">
+            <NavLink to="/ContactUsPage" >
+              Contact Us
+            </NavLink>
+            {isOpen && <hr />}
           </li>
           <li className="lg:mr-4 mb-4 lg:mb-0">
             <a href="#form" className="bg-yellow-200 hover:bg-yellow-300 hover:!text-black !text-black font-bold py-2 px-4 rounded whitespace-nowrap">

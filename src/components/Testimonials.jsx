@@ -3,29 +3,41 @@ import Underline from './Underline';
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [testimonialData, setTestimonialData] = useState([
+  const [testimonialData] = useState([
     {
       name: 'John Doe',
+      age: 30,
+      city: 'New York',
       review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.',
     },
     {
       name: 'Jane Smith',
+      age: 25,
+      city: 'Los Angeles',
       review: 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
     },
     {
       name: 'Bob Johnson',
+      age: 35,
+      city: 'Chicago',
       review: 'Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
     },
     {
       name: 'Alice Brown',
+      age: 28,
+      city: 'San Francisco',
       review: 'Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
     },
     {
       name: 'Mike Davis',
+      age: 40,
+      city: 'Miami',
       review: 'Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
     },
     {
       name: 'Emily Taylor',
+      age: 32,
+      city: 'Austin',
       review: 'Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
     },
   ]);
@@ -43,10 +55,10 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="bg-white py-10">
-      <div className="container mx-auto w-4/5 px-4 sm:px-6 lg:px-8">
-      <h2 className="text-center text-3xl font-bold text-[#454545]">Testimonials</h2>
-      <Underline />
+    <div className="bg-white py-10 flex flex-col items-center">
+      <div className="container w-4/5 sm:px-6 lg:px-8">
+        <h2 className="text-center text-3xl font-bold text-[#454545]">Testimonials</h2>
+        <Underline />
         <div className="flex justify-center items-center gap-4 pt-6">
           {/* Previous button */}
           <button
@@ -59,7 +71,7 @@ const Testimonials = () => {
           </button>
 
           {/* Testimonial card */}
-          <div className="bg-gray-50 p-6 sm:p-8 shadow-lg rounded-lg flex flex-col sm:flex-row items-center gap-6 w-full sm:w-4/5 lg:w-3/5">
+          <div className="bg-gray-50 p-6 sm:p-8 shadow-lg rounded-lg flex flex-col sm:flex-row items-center gap-6 min-w-[90%] md:min-w-[60%]">
             {/* Profile icon with initials */}
             <div className="flex-shrink-0 bg-gray-300 text-gray-800 font-bold rounded-full h-16 w-16 flex items-center justify-center text-2xl">
               {getInitials(testimonialData[currentIndex].name)}
@@ -72,6 +84,7 @@ const Testimonials = () => {
               <p className="text-gray-900 font-semibold text-lg sm:text-xl">
                 {testimonialData[currentIndex].name}
               </p>
+              <p className="text-gray-500 text-sm sm:text-base">{testimonialData[currentIndex].age} years old, {testimonialData[currentIndex].city}</p>
             </div>
           </div>
 

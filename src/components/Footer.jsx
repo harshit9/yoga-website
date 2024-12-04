@@ -5,17 +5,17 @@ const Footer = () => {
         <footer className="bg-[#333] text-white px-6 py-4">
             {/* Links Section */}
             <div className="flex flex-wrap justify-center space-x-4 mb-2">
-                <a href="#home" className="text-lg hover:underline">Home</a>
+                <a href="/" className="text-lg hover:underline">Home</a>
                 <span className='text-lg'>|</span>
-                <a href="#pricing" className="text-lg hover:underline">Pricing</a>
+                <a href="/pricing" className="text-lg hover:underline">Pricing</a>
                 <span className='text-lg'>|</span>
-                <a href="#privacy" className="text-lg hover:underline">Privacy Policy</a>
+                <a href="/privacy" className="text-lg hover:underline">Privacy Policy</a>
                 <span className='text-lg'>|</span>
-                <a href="#refund" className="text-lg hover:underline">Refund Policy</a>
+                <a href="/refund" className="text-lg hover:underline">Refund Policy</a>
                 <span className='text-lg'>|</span>
-                <a href="#callback" className="text-lg hover:underline">Request a Call Back</a>
+                <a href="/callback" className="text-lg hover:underline">Request a Call Back</a>
                 <span className='text-lg'>|</span>
-                <a href="#terms" className="text-lg hover:underline">Terms of Use</a>
+                <a href="/terms" className="text-lg hover:underline">Terms of Use</a>
             </div>
 
             {/* Horizontal Line */}

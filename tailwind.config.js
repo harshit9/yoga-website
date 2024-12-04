@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '420px',    // Custom extra small breakpoint
+      },
       animation: {
         floating: 'float 2.5s ease-in-out infinite',
       },
