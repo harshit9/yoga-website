@@ -26,7 +26,7 @@ const Courses = () => {
 
   return (
     <section id="courses" className="courses">
-      <div className="container mx-auto p-4 pt-6 w-4/5">
+      <div className="container mx-auto p-4 pt-6 w-11/12 lg:w-4/5">
         <h2 className="text-center text-4xl font-bold text-[#454545]">Our Courses</h2>
         <Underline />
         
