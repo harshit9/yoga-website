@@ -1,36 +1,40 @@
-// Form.js
-import { useState } from 'react';
+import { useState } from "react";
 
 function Form() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [course, setCourse] = useState('');
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [course, setCourse] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData();
-    formData.append('entry.1424210446', name);
-    formData.append('entry.1747344444', email);
-    formData.append('entry.2051279445', phone);
-    formData.append('entry.2084774444', course);
+    formData.append("entry.2005620554", name); // Name field ID
+    formData.append("entry.1166974658", phone); // Phone field ID
+    formData.append("entry.839337160", course); // Course field ID
 
-    fetch('https://docs.google.com/forms/u/0/d/e/FORM_ID/formResponse', {
-      method: 'POST',
-      mode: 'no-cors',
-      body: formData,
-    })
-      .then((response) => response.json())
-      .then((data) => console.log(data))
-      .catch((error) => console.error(error));
+    fetch(
+      "https://docs.google.com/forms/d/e/1FAIpQLSfYrcus1J8MxuSMTY7E4hetJLWpIHsIJ3WBy-84MNybilsfWQ/formResponse",
+      {
+        method: "POST",
+        mode: "no-cors",
+        body: formData,
+      }
+    )
+      .then(() => alert("Your response has been recorded!"))
+      .catch((error) => console.error("Error:", error));
   };
 
   const courses = [
-    'Hatha Yoga',
-    'Vinyasa Yoga',
-    'Ashtanga Yoga',
-    'Restorative Yoga',
-    'Yin Yoga',
+    "Prenatal Yoga",
+    "Postnatal Yoga",
+    "Beginner Yoga",
+    "Regular Practice Yoga",
+    "Old Age Yoga",
+    "Medical-Specific Yoga",
+    "Pranayama",
+    "Chanting",
+    "Meditation",
+    "Satvik Diet Workshop",
   ];
 
   return (
@@ -42,16 +46,7 @@ function Form() {
           value={name}
           onChange={(event) => setName(event.target.value)}
           className="block w-full p-2 text-sm bg-gray-100 text-gray-700 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
-          required
-        />
-      </label>
-      <label className="block mb-2 text-gray-700 ">
-        <span className="text-lg">Email:</span>
-        <input
-          type="email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-          className="block w-full p-2 text-sm bg-white/100 text-gray-700 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+          placeholder="Enter you name"
           required
         />
       </label>
@@ -61,7 +56,9 @@ function Form() {
           type="tel"
           value={phone}
           onChange={(event) => setPhone(event.target.value)}
-          className="block w-full p-2  text-sm bg-gray-100 text-gray-700 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+          className="block w-full p-2 text-sm bg-gray-100 text-gray-700 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+          pattern="[0-9]{10}" // Restricts to 10-digit phone numbers
+          placeholder="Enter your phone-number"
           required
         />
       </label>
@@ -70,7 +67,7 @@ function Form() {
         <select
           value={course}
           onChange={(event) => setCourse(event.target.value)}
-          className="block w-full p-2  text-sm bg-gray-100 text-gray-700 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+          className="block w-full p-2 text-sm bg-gray-100 text-gray-700 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
           required
         >
           <option value="">Select a course</option>
@@ -85,7 +82,7 @@ function Form() {
         type="submit"
         className="mt-2 bg-yellow-200 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded whitespace-nowrap mb-2 text-center shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
       >
-        Enquire Now
+        Submit
       </button>
     </form>
   );

@@ -1,6 +1,7 @@
 // Navbar.js
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import logo from "../assets/Advait_Logo_removebg_resize.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +18,7 @@ const Navbar = () => {
         
         <Link to="/" className="text-xl font-bold">
           <div className='flex items-center gap-1'>
-            <img src='assets/Advait_Logo_removebg_resize.png' className='h-12'/> 
+            <img src={logo} className='h-12'/> 
             <div>Advait</div>
             {/* <div>अद्वैत</div> */}
 
@@ -89,7 +90,7 @@ const Navbar = () => {
             {isOpen && <hr />}
           </li>
           <li className="lg:mr-4 mb-4 lg:mb-0">
-            <a href="#form" className="bg-yellow-200 hover:bg-yellow-300 hover:!text-black !text-black font-bold py-2 px-4 rounded whitespace-nowrap">
+            <a href="/callback" className="bg-yellow-200 hover:bg-yellow-300 hover:!text-black !text-black font-bold py-2 px-4 rounded whitespace-nowrap">
               Enquire Now
             </a>
           </li>
